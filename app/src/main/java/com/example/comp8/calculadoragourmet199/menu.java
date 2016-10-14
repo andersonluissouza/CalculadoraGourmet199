@@ -28,10 +28,12 @@ public class menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               //setContentView(R.layout.activity_calculadora);
-                Intent intent = new Intent(menu.this, calculadora.class);
+                Intent intent = new Intent();
+                intent.setClass(menu.this, calculadora.class);
+
                 startActivity(intent);
-                setContentView(v.findViewById(R.id.calculadora));
+
+
             }
         });
 
@@ -39,7 +41,11 @@ public class menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                setContentView(R.layout.activity_cadastro);
+                Intent intent = new Intent();
+                intent.setClass(menu.this, cadastro.class);
+
+                startActivity(intent);
+
             }
         });
     }

@@ -1,5 +1,6 @@
 package com.example.comp8.calculadoragourmet199;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -24,18 +25,28 @@ public class login extends AppCompatActivity {
         final EditText ed_senha = (EditText)findViewById(R.id.ed_senha);
         Button button_login = (Button) findViewById(R.id.button_login);
         Button button_cancel = (Button) findViewById(R.id.button_cancel);
-        LinearLayout menu = (LinearLayout) findViewById(R.id.menu);
+        final LinearLayout menu = (LinearLayout) findViewById(R.id.menu);
 
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                     if (ed_usuario.getText().toString().equals("admin") && ed_senha.getText().toString().equals("admin")){
-                        setContentView(R.layout.activity_menu);
+
+                        //setContentView(R.layout.activity_menu);
+                        Intent intent = new Intent();
+                        intent.setClass(login.this, menu.class);
+
+                        startActivity(intent);
+
+                        finish();
+
                         Toast.makeText(login.this,"Usuário Logado",Toast.LENGTH_SHORT).show();
                     }
                     else{
+
                         Toast.makeText(login.this,"Login Inválido",Toast.LENGTH_SHORT).show();
+
                     }
 
 

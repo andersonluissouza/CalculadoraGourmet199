@@ -1,7 +1,17 @@
 package com.example.comp8.calculadoragourmet199;
 
-public class cadastro {
-    public void cadastro(){
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
+public class cadastro extends AppCompatActivity{
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cadastro);
     }
+
+
+
 }
