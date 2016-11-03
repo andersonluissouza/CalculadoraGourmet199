@@ -21,6 +21,7 @@ public class menu extends AppCompatActivity {
 
         Button b_calc = (Button)findViewById(R.id.b_calc);
         Button b_cadastro = (Button)findViewById(R.id.b_cadastro);
+        Button b_consultar = (Button)findViewById(R.id.b_consultar);
         GridLayout calculadora = (GridLayout) findViewById(R.id.calculadora);
         LinearLayout cadastro = (LinearLayout) findViewById(R.id.cadastro);
 
@@ -43,6 +44,17 @@ public class menu extends AppCompatActivity {
 
                 Intent intent = new Intent();
                 intent.setClass(menu.this, cadastro.class);
+
+                startActivity(intent);
+
+            }
+        });
+        b_consultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setClass(menu.this, consulta.class);
 
                 startActivity(intent);
 
